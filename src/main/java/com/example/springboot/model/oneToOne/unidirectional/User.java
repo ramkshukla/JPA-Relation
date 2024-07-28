@@ -4,7 +4,7 @@ package com.example.springboot.model.oneToOne.unidirectional;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "User")
+@Table(name = "UserEntity")
 public class User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
