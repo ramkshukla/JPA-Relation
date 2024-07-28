@@ -1,9 +1,7 @@
 package com.example.springboot.controller.oneToOne.unidirectional;
 
-import com.example.springboot.model.oneToOne.unidirectional.Address;
 import com.example.springboot.model.oneToOne.unidirectional.User;
-import com.example.springboot.service.oneToOne.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.springboot.service.oneToOne.unidirectional.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

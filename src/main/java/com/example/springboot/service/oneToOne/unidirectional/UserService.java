@@ -1,7 +1,6 @@
-package com.example.springboot.service.oneToOne;
+package com.example.springboot.service.oneToOne.unidirectional;
 
 import com.example.springboot.model.oneToOne.unidirectional.User;
-import com.example.springboot.repository.oneToOne.unidirectional.AddressRepository;
 import com.example.springboot.repository.oneToOne.unidirectional.UserRepository;
 import org.springframework.stereotype.Service;
 

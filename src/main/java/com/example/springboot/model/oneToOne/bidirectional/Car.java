@@ -11,7 +11,7 @@ public class Car {
 
     private String brand;
 
-    @OneToOne(mappedBy = "car")
+    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Owner owner;
 
 

@@ -1,4 +1,4 @@
-package com.example.springboot.service.oneToOne;
+package com.example.springboot.service.oneToOne.unidirectional;
 
 import com.example.springboot.model.oneToOne.unidirectional.Address;
 import com.example.springboot.repository.oneToOne.unidirectional.AddressRepository;
