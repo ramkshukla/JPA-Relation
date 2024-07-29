@@ -1,6 +1,7 @@
 package com.example.springboot.controller.oneToOne.unidirectional;
 
 import com.example.springboot.entity.oneToOne.unidirectional.Address;
+import com.example.springboot.model.oneToOne.unidirectional.UserAddressDTO;
 import com.example.springboot.service.oneToOne.unidirectional.AddressService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +19,7 @@ public class AddressController {
     }
 
     @GetMapping
-    public Iterable<Address> getAddresses() {
-        return addressService.getAddresses();
+    public UserAddressDTO getAddresses() {
+        return addressService.findAllAddresses();
     }
 }

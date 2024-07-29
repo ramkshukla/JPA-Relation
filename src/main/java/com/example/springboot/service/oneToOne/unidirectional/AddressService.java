@@ -1,6 +1,7 @@
 package com.example.springboot.service.oneToOne.unidirectional;
 
 import com.example.springboot.entity.oneToOne.unidirectional.Address;
+import com.example.springboot.model.oneToOne.unidirectional.UserAddressDTO;
 import com.example.springboot.repository.oneToOne.unidirectional.AddressRepository;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,11 @@ public class AddressService {
         this.addressRepository = addressRepository;
     }
 
-    public Iterable<Address> getAddresses() {
-        return addressRepository.findAll();
+    public UserAddressDTO findAllAddresses() {
+        UserAddressDTO userAddressDTO = new UserAddressDTO();
+        userAddressDTO.setStatus("200");
+        userAddressDTO.setMessage("Data Fetched Successfully");
+        userAddressDTO.setAddress(addressRepository.findAll());
+        return userAddressDTO;
     }
 }
