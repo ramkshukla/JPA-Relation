@@ -1,6 +1,5 @@
 package com.example.springboot.controller.oneToOne.bidirectional;
 
-import com.example.springboot.entity.oneToOne.OwnerCarInfo;
 import com.example.springboot.entity.oneToOne.bidirectional.Owner;
 import com.example.springboot.service.oneToOne.bidirectional.OwnerService;
 import org.springframework.web.bind.annotation.GetMapping;

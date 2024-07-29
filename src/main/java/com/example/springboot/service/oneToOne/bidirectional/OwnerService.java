@@ -1,13 +1,8 @@
 package com.example.springboot.service.oneToOne.bidirectional;
 
-import com.example.springboot.entity.oneToOne.OwnerCarInfo;
 import com.example.springboot.entity.oneToOne.bidirectional.Owner;
 import com.example.springboot.repository.oneToOne.bidirectional.OwnerRepository;
-import jakarta.persistence.Tuple;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class OwnerService {

@@ -1,4 +1,4 @@
-package com.example.springboot.entity.oneToOne;
+package com.example.springboot.model.oneToOne.bidirectional;
 
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -8,25 +8,25 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @SqlResultSetMapping(
         name = "OwnerCarInfoMapping",
         classes = @ConstructorResult(
-                targetClass = OwnerCarInfo.class,
+                targetClass = OwnerCarDTO.class,
                 columns = {
                         @ColumnResult(name = "firstName", type = String.class),
                         @ColumnResult(name = "brand", type = String.class)
                 }
         )
 )
-public class OwnerCarInfo {
+public class OwnerCarDTO {
     @Id
     private Long id;
     private String firstName;
     private String brand;
 
-    public  OwnerCarInfo(String firstName, String brand) {
+    public OwnerCarDTO(String firstName, String brand) {
         this.firstName = firstName;
         this.brand = brand;
     }
 
-    public OwnerCarInfo() {}
+    public OwnerCarDTO() {}
 
     public String getFirstName() {
         return firstName;
