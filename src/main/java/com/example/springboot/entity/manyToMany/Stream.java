@@ -1,5 +1,6 @@
 package com.example.springboot.entity.manyToMany;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class Stream {
             inverseJoinColumns = @JoinColumn(name = "viewer_id")
 
     )
+    @JsonManagedReference
     private List<Viewer> followers = new ArrayList<>();
 
     public Long getId() {

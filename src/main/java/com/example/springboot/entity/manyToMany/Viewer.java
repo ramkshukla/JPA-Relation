@@ -1,5 +1,6 @@
 package com.example.springboot.entity.manyToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -14,6 +15,7 @@ public class Viewer {
     private String name;
 
     @ManyToMany(mappedBy = "followers")
+    @JsonBackReference
     private Set<Stream> followerStream = new HashSet<>();
 
     public Long getId() {
