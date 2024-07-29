@@ -1,6 +1,7 @@
 package com.example.springboot.service.oneToMany.unidirectional;
 
 import com.example.springboot.entity.oneToMany.unidirectional.Student;
+import com.example.springboot.model.oneToMany.unidirectional.StudentUniversityDTO;
 import com.example.springboot.repository.oneToMany.unidirectional.StudentRepository;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +14,11 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
-    public Iterable<Student> getAllStudents() {
-        return studentRepository.findAll();
+    public StudentUniversityDTO getAllStudents() {
+        StudentUniversityDTO studentUniversityDTO = new StudentUniversityDTO();
+        studentUniversityDTO.setStudents(studentRepository.findAll());
+        studentUniversityDTO.setMessage("Data fetched successfully");
+        studentUniversityDTO.setStatus("200");
+        return studentUniversityDTO;
     }
 }

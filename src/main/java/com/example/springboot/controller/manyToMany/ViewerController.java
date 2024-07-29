@@ -1,6 +1,7 @@
 package com.example.springboot.controller.manyToMany;
 
 import com.example.springboot.entity.manyToMany.Viewer;
+import com.example.springboot.model.manyToMany.StreamViewerDTO;
 import com.example.springboot.service.manyToMany.ViewerService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ public class ViewerController {
     }
 
     @GetMapping
-    public Iterable<Viewer> getViewers() {
+    public StreamViewerDTO getViewers() {
         return viewerService.findAllViwers();
     }
 }

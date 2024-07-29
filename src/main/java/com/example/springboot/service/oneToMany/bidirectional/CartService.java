@@ -1,6 +1,7 @@
 package com.example.springboot.service.oneToMany.bidirectional;
 
 import com.example.springboot.entity.oneToMany.bidirectional.Cart;
+import com.example.springboot.model.oneToMany.bidirectional.CartItemDTO;
 import com.example.springboot.repository.oneToMany.bidirectional.CartRepository;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,12 @@ public class CartService {
         this.cartRepository = cartRepository;
     }
 
-    public Iterable<Cart> findAllCarts() {
-        return cartRepository.findAll();
+    public CartItemDTO findAllCarts() {
+        CartItemDTO cartItemDTO = new CartItemDTO();
+        cartItemDTO.setCarts(cartRepository.findAll());
+        cartItemDTO.setMessage("Data fetched successfully");
+        cartItemDTO.setStatus("200");
+        return cartItemDTO;
     }
+
 }

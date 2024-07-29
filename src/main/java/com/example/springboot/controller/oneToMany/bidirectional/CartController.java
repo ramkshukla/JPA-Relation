@@ -2,6 +2,7 @@ package com.example.springboot.controller.oneToMany.bidirectional;
 
 
 import com.example.springboot.entity.oneToMany.bidirectional.Cart;
+import com.example.springboot.model.oneToMany.bidirectional.CartItemDTO;
 import com.example.springboot.service.oneToMany.bidirectional.CartService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,7 @@ public class CartController {
     }
 
     @GetMapping
-    public Iterable<Cart> getCart() {
+    public CartItemDTO getCart() {
         return cartService.findAllCarts();
     }
 }
