@@ -1,6 +1,7 @@
 package com.example.springboot.controller.oneToOne.bidirectional;
 
 import com.example.springboot.entity.oneToOne.OwnerCarInfo;
+import com.example.springboot.entity.oneToOne.bidirectional.Owner;
 import com.example.springboot.service.oneToOne.bidirectional.OwnerService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +17,12 @@ public class OwnerController {
         this.ownerService = ownerService;
     }
 
+//    @GetMapping
+//    public Iterable<OwnerCarInfo> getOwners() {
+//        return ownerService.findOwner();
+//    }
     @GetMapping
-    public Iterable<OwnerCarInfo> getOwners() {
-        return ownerService.findOwner();
+    public Iterable<Owner> getOwners() {
+        return ownerService.getOwners();
     }
 }

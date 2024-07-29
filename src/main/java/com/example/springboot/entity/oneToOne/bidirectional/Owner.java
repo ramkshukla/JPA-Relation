@@ -1,5 +1,7 @@
 package com.example.springboot.entity.oneToOne.bidirectional;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,6 +15,7 @@ public class Owner {
 
     @OneToOne
     @JoinColumn(name = "car_id")
+    @JsonBackReference
     private Car car;
 
 
