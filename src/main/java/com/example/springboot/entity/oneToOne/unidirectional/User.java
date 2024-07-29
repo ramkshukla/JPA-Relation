@@ -1,10 +1,12 @@
 package com.example.springboot.entity.oneToOne.unidirectional;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "UserEntity")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

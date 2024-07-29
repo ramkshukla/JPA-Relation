@@ -1,13 +1,14 @@
 package com.example.springboot.controller.oneToOne.unidirectional;
 
 import com.example.springboot.entity.oneToOne.unidirectional.User;
+import com.example.springboot.model.oneToOne.unidirectional.UserAddressDTO;
 import com.example.springboot.service.oneToOne.unidirectional.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/users")
+@RequestMapping(path = "/user")
 public class UserController {
 
     private final  UserService userService;
@@ -17,7 +18,7 @@ public class UserController {
     }
 
     @GetMapping
-    public  Iterable<User> getUsers(){
+    public UserAddressDTO getUsers(){
         return  userService.getUser();
     }
 }

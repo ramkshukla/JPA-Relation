@@ -1,9 +1,11 @@
 package com.example.springboot.entity.oneToOne.unidirectional;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Address")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
