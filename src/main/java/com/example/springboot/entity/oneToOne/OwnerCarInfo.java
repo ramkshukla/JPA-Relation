@@ -1,6 +1,5 @@
-package com.example.springboot.model.oneToOne;
+package com.example.springboot.entity.oneToOne;
 
-import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
@@ -16,24 +15,18 @@ import com.fasterxml.jackson.annotation.JsonInclude;
                 }
         )
 )
-
 public class OwnerCarInfo {
-
-    private String firstName;
-    private String brand;
     @Id
     private Long id;
-
+    private String firstName;
+    private String brand;
 
     public  OwnerCarInfo(String firstName, String brand) {
         this.firstName = firstName;
         this.brand = brand;
-
     }
 
-    public OwnerCarInfo() {
-
-    }
+    public OwnerCarInfo() {}
 
     public String getFirstName() {
         return firstName;

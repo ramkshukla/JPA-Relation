@@ -1,4 +1,4 @@
-package com.example.springboot.model.manyToMany;
+package com.example.springboot.entity.manyToMany;
 
 import jakarta.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.example.springboot.model.oneToMany.bidirectional;
+package com.example.springboot.entity.oneToMany.bidirectional;
 
 import jakarta.persistence.*;
 

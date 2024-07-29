@@ -1,8 +1,7 @@
-package com.example.springboot.model.oneToMany.unidirectional;
+package com.example.springboot.entity.oneToMany.unidirectional;
 
 import jakarta.persistence.*;
 
-import javax.swing.text.Style;
 import java.util.ArrayList;
 import java.util.List;
 

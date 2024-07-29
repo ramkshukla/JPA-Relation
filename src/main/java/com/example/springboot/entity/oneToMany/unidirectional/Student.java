@@ -1,14 +1,15 @@
-package com.example.springboot.model.oneToOne.unidirectional;
+package com.example.springboot.entity.oneToMany.unidirectional;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Address")
-public class Address {
+@Table(name = "Student")
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String city;
+
+    private String name;
 
     public Long getId() {
         return id;
@@ -18,13 +19,11 @@ public class Address {
         this.id = id;
     }
 
-
-    public String getCity() {
-        return city;
+    public String getName() {
+        return name;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setName(String name) {
+        this.name = name;
     }
-
 }

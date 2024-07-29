@@ -1,7 +1,7 @@
 package com.example.springboot.controller.oneToOne.bidirectional;
 
 
-import com.example.springboot.model.oneToOne.bidirectional.Car;
+import com.example.springboot.entity.oneToOne.bidirectional.Car;
 import com.example.springboot.service.oneToOne.bidirectional.CarService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CarController {
 
     private final CarService carService;
+
     public CarController(CarService carService) {
         this.carService = carService;
     }

@@ -1,9 +1,6 @@
-package com.example.springboot.model.oneToMany.bidirectional;
+package com.example.springboot.entity.oneToMany.bidirectional;
 
 import jakarta.persistence.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "Item")

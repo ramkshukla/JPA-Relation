@@ -1,8 +1,6 @@
 package com.example.springboot.repository.oneToOne.bidirectional;
 
-import com.example.springboot.model.oneToOne.OwnerCarInfo;
-import com.example.springboot.model.oneToOne.bidirectional.Car;
-import com.example.springboot.model.oneToOne.bidirectional.Owner;
+import com.example.springboot.entity.oneToOne.bidirectional.Owner;
 import jakarta.persistence.Tuple;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

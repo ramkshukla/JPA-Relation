@@ -1,7 +1,6 @@
 package com.example.springboot.service.oneToOne.bidirectional;
 
-import com.example.springboot.model.oneToOne.OwnerCarInfo;
-import com.example.springboot.model.oneToOne.bidirectional.Owner;
+import com.example.springboot.entity.oneToOne.OwnerCarInfo;
 import com.example.springboot.repository.oneToOne.bidirectional.OwnerRepository;
 import jakarta.persistence.Tuple;
 import org.springframework.stereotype.Service;
