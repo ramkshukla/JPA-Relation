@@ -1,7 +1,7 @@
 package com.example.springboot;
 
-import com.example.springboot.mail.MailProperties;
-import com.example.springboot.mail.MailService;
+import com.example.springboot.UserRelation.service.mail.MailProperties;
+import com.example.springboot.UserRelation.service.mail.MailService;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
